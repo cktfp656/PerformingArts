@@ -51,7 +51,7 @@ if(!empty($_POST)) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>SeedSNS</title>
+	<title>Performing Arts</title>
 
 	<!-- Bootstrap -->
 	<link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -72,7 +72,7 @@ if(!empty($_POST)) {
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.php"><span class="strong-title"><i class="fa fa-twitter-square"></i> Seed SNS</span></a>
+				<a class="navbar-brand" href="index.php"><span class="strong-title"><a class="navbar-brand" href="index.html"><img src="../img/logo.png"></a></span></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

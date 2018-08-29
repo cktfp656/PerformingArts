@@ -53,12 +53,12 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only"><a class="navbar-brand" href="index.html"><img src="img/logo.png"></a></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><span class="strong-title"><!-- <i class="fa fa-twitter-square"></i> --> !!!!!!!!!!!!! Performing Arts !!!!!!!!!!!!</span></a>
+                <a class="navbar-brand" href="index.html"><a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+
+<?php
+	session_start();
+	require('db_connect.php');
+	if(!empty($_POST)){
+		$sql = 'INSERT INTO `comments`(`user_id`,`category_code`,`comment`,`created`) VALUES(?,?,?,now())';
+		$data = array($_SESSION['id'],'kimono',$_POST['comment']);
+            $stmt = $dbh->prepare($sql);
+            $stmt ->execute($data);
+
+
+	}
+
+
+
+ ?>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -61,16 +77,17 @@
 
 			</div>
 		</div>
+		<form method="post" action="" class="form-horizontal" role="form">
 		<div class="row">
 			<div class="col-md-4"></div>
-				<div class="col-md-4" style="background: red;height:120px;"><textarea name=contentt  rows="4" style="width:500px;"></textarea></div>
-				 <div class=col-md-4" height:120px"><button class="btn btn-primary">comment</button></div>
+				<div class="col-md-4" style="background: red;height:120px;"><textarea name="comment"  rows="4" style="width:500px;"></textarea></div>
+				 <div class=col-md-4" height:120px"></div>
 		</div>
 		<div class="row" style="border:2px solid; height:70px;text-align: center;">
 			<div class="col-md-4"></div>
 			<div class="col-md-4" ><button class="btn btn-primary" >comment here</button><button class="btn btn-primary">top</div></button></div>
 			<div class="col-md-4"></div>
-			<div>
-	</div>
-</div></body>
+		</div>
+		</form>
+</body>
 </html>

@@ -9,11 +9,6 @@ if(!isset($_SESSION['id'])){
   exit();
 }
 
-
-
-
-
-
  ?>
 
 
@@ -101,7 +96,7 @@ if(!isset($_SESSION['id'])){
       <div id="home-row-2" class="row clearfix">
 
         <div class="col-12 col-sm-4">
-          <a href="#portfolio" class="smoothscroll navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso.jpg"></div><span>kabuki</span></a>
+          <a href="kabuki.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso.jpg"></div><span>kabuki</span></a>
         </div>
 
         <div class="col-12 col-sm-4">
@@ -109,7 +104,7 @@ if(!isset($_SESSION['id'])){
         </div>
 
         <div class="col-12 col-sm-4">
-          <a href="#clients" class="smoothscroll navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso.jpg"></div><span>rakugo</span></a>
+          <a href="rakugo.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso.jpg"></div><span>rakugo</span></a>
         </div>
       </div>
       <!-- /row -->

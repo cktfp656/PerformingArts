@@ -65,7 +65,7 @@ if(!isset($_SESSION['id'])){
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li style="padding-top: 10px; padding-right: 10px;"><img src="img/kawauso.jpg" alt="" style=" width: 40px;height:40px"></li>
+          <li style="padding-top: 10px; padding-right: 10px;"><img src="img/kawauso1.jpg" alt="" style=" width: 40px;height:40px"></li>
           <li class="active"><a href="#intro" class="smoothscroll">Performing Arts</a></li>
           <li><a href="#about-us" class="smoothscroll">About Me</a></li>
           <li><a href="join/regi_index.php" >Resiter</a></li>
@@ -96,15 +96,15 @@ if(!isset($_SESSION['id'])){
       <div id="home-row-2" class="row clearfix">
 
         <div class="col-12 col-sm-4">
-          <a href="kabuki.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso.jpg"></div><span>kabuki</span></a>
+          <a href="kabuki.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso1.jpg"></div><span>kabuki</span></a>
         </div>
 
         <div class="col-12 col-sm-4">
-          <a href="kimono.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso.jpg"></div><span>kimono</span></a>
+          <a href="kimono.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso1.jpg"></div><span>kimono</span></a>
         </div>
 
         <div class="col-12 col-sm-4">
-          <a href="rakugo.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso.jpg"></div><span>rakugo</span></a>
+          <a href="rakugo.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso1.jpg"></div><span>rakugo</span></a>
         </div>
       </div>
       <!-- /row -->

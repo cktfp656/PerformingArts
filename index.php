@@ -1,3 +1,27 @@
+<?php 
+session_start();
+
+require('db_connect.php');
+echo'<br>';
+
+if(!isset($_SESSION['id'])){
+  header('Location: login.php');
+  exit();
+}
+
+
+
+
+
+
+ ?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -54,7 +78,7 @@
           <li><a href="#clients" class="smoothscroll">Clients</a></li>
           <li><a href="new_contents.html">My Page</a></li>
           <li><a href="#contact" class="smoothscroll">Contact</a></li>
-          <li><a href="regi_index.php" >logout</a></li>
+          <li><a href="logout.php" >logout</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->

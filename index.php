@@ -71,7 +71,7 @@ if(!isset($_SESSION['id'])){
           <li><a href="join/regi_index.php" >Resiter</a></li>
           <li><a href="#portfolio" class="smoothscroll">Portfolio</a></li>
           <li><a href="#clients" class="smoothscroll">Clients</a></li>
-          <li><a href="new_contents.html">My Page</a></li>
+          <li><a href="new_contents.php">My Page</a></li>
           <li><a href="#contact" class="smoothscroll">Contact</a></li>
           <li><a href="logout.php" >logout</a></li>
         </ul>

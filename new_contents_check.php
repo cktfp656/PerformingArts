@@ -1,3 +1,10 @@
+<?php 
+if($ext == '.jpg' || $ext =='.png' ,.|| $ext == '.gif'){
+                $picture_name = date('YmdHis') . $_FILES['contents-img']['name'];
+                move_uploaded_file($_FILES['contents-img']['tmp_name'],'../contents-img/' . '$contents-img');}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,35 +51,19 @@
     <br>
     <br>
     <div class="container">
-    	<div class="row">
-    		<div class=" col-md-offset-3 col-md-6 col-md-offset-3">
-    			 <div class="well" style="text-align: center;">画像の登録をして下さい。</div>
-    			<form method="POST" action="new_contents_check.html">
-    				<input type="file" name="picture_path" class="form-control">
-
-
-    				<div class="container">
-    					<div class="row">
-    						<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-    <div class="btn-group" data-toggle="buttons">
-		<label class="btn btn-success active">
-			<input type="radio" autocomplete="off" checked> 着物
-		</label>
-		<label class="btn btn-success">
-			<input type="radio" autocomplete="off"> 歌舞伎
-		</label>
-		<label class="btn btn-success">
-			<input type="radio" autocomplete="off"> 落語
-		</label>
-	</div>
-	</div>
-	</div>
-	</div>
-	<br>
-					<div class="col-md-offset-4 col-md-6 col-md-offset-4">
-      				<input type="submit" class="btn btn-default" value="確認画面へ">
-      				</div>
-
+    	   <div class="row">
+    		  <div class=" col-md-offset-2 col-md-5 col-md-offset-5">
+                    <div class="well" style="text-align: center;">ご登録内容をご確認下さい。</div>
+    			<form method="POST" action="">
+                    <table class="table table-striped table-condensed">
+                        <tbody>
+                            <tr>
+                                <td><div class="text-center">プロフィール画像</div><div class="text-center"><img src="img/kawauso.jpg" width="300" height="300"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="index.php">&laquo;&nbsp;戻る</a> |
+                    <input type="submit" class="btn btn-default" value="登録">
     			</form>
     		</div>
     	</div>

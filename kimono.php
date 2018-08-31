@@ -79,9 +79,9 @@
 		</div>
 		<form method="post" action="" class="form-horizontal" role="form">
 		<div class="row">
-			<div class="col-md-4"></div>
-				<div class="col-md-4" style="background: red;height:120px;"><textarea name="comment"  rows="4" style="width:500px;"></textarea></div>
-				 <div class=col-md-4" height:120px"></div>
+			<div class="col-md-3"></div>
+				<div class="col-md-6" style="background: red;height:120px;"><textarea name="comment"  rows="4" style="width:100%;"></textarea></div>
+				 <div class=col-md-3" height:120px"></div>
 		</div>
 		<div class="row" style="border:2px solid; height:70px;text-align: center;">
 			<div class="col-md-4"></div>

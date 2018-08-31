@@ -1,7 +1,13 @@
 <?php 
-if($ext == '.jpg' || $ext =='.png' ,.|| $ext == '.gif'){
-                $picture_name = date('YmdHis') . $_FILES['contents-img']['name'];
-                move_uploaded_file($_FILES['contents-img']['tmp_name'],'../contents-img/' . '$contents-img');}
+
+$ext = substr($_FILES['picture_path']['name'], -4);
+$ext = strtolower($ext);
+
+if($ext == '.jpg' || $ext =='.png' || $ext == '.gif'){
+    $picture_name = date('YmdHis') . $_FILES['picture_path']['name'];
+
+    move_uploaded_file($_FILES['picture_path']['tmp_name'],'contents-img/'. $picture_name);
+}
 
 
 ?>
@@ -58,7 +64,7 @@ if($ext == '.jpg' || $ext =='.png' ,.|| $ext == '.gif'){
                     <table class="table table-striped table-condensed">
                         <tbody>
                             <tr>
-                                <td><div class="text-center">プロフィール画像</div><div class="text-center"><img src="img/kawauso.jpg" width="300" height="300"></div></td>
+                                <td><div class="text-center">プロフィール画像</div><div class="text-center"><img src="contents-img/<?php echo $picture_name; ?>" width="300" height="300"></div></td>
                             </tr>
                         </tbody>
                     </table>

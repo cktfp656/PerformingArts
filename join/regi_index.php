@@ -28,10 +28,10 @@ if(!empty($_POST)) {
 
 			if($ext == '.jpg' || $ext =='.png' || $ext == '.gif'){
 				$picture_name = date('YmdHis') . $_FILES['picture_path']['name'];
-				move_uploaded_file($_FILES['picture_path']['tmp_name'],'../picture_path/' . $picture_name);
+				move_uploaded_file($_FILES['picture_path']['tmp_name'],'../contents-img/' . $picture_name);
 
 				$_SESSION['join'] = $_POST;
-				$_SESSION['join']['picture_path'] = $picture_name;
+				$_SESSION['join']['contents'] = $picture_name;
 
 				header('Location: regi_check.php');
 			}else{
@@ -45,7 +45,7 @@ if(!empty($_POST)) {
 ?>
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

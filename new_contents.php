@@ -47,8 +47,8 @@
     	<div class="row">
     		<div class=" col-md-offset-3 col-md-6 col-md-offset-3">
     			 <div class="well" style="text-align: center;">画像の登録をして下さい。</div>
-    			<form method="POST" action="new_contents_check.php">
-    				<input type="file" name="picture_path" class="form-control">
+    			<form method="POST" action="new_contents_check.php" class=""form-horizontal" role="form" enctype="multipart/form-data">
+   				<input type="file" name="picture_path" class="form-control">
 
 
     				<div class="container">

@@ -45,33 +45,25 @@
     <br>
     <div class="container">
     	<div class="row">
-    		<div class=" col-md-offset-3 col-md-6 col-md-offset-3">
+    		<div class="col-md-6 col-md-offset-3">
     			 <div class="well" style="text-align: center;">画像の登録をして下さい。</div>
-    			<form method="POST" action="new_contents_check.php" class=""form-horizontal" role="form" enctype="multipart/form-data">
-   				<input type="file" name="picture_path" class="form-control">
-
-
-    				<div class="container">
-    					<div class="row">
-    						<div class="col-md-offset-2 col-md-8 col-md-offset-2">
-    <div class="btn-group" data-toggle="buttons">
-		<label class="btn btn-success active">
-			<input type="radio" autocomplete="off"> 着物
-		</label>
-		<label class="btn btn-success">
-			<input type="radio" autocomplete="off"> 歌舞伎
-		</label>
-		<label class="btn btn-success">
-			<input type="radio" autocomplete="off"> 落語
-		</label>
-	</div>
-	</div>
-	</div>
-	</div>
-	<br>
-					<div class="col-md-offset-4 col-md-6 col-md-offset-4">
-      				<input type="submit" class="btn btn-default" value="確認画面へ">
-      				</div>
+        			<form method="POST" action="new_contents_check.php" class=""form-horizontal" role="form" enctype="multipart/form-data">
+           				<input type="file" name="picture_path" class="form-control">
+                        <div class="btn-group" data-toggle="buttons" style="width: 555px;">
+                            <label class="btn btn-success active" style="width: calc(100%/3);">
+                                <input name="code" type="radio" autocomplete="off" value="kimono" checked> 着物
+                            </label>
+                    		<label class="btn btn-success" style="width: calc(100%/3);">
+                    			<input name="code" type="radio" autocomplete="off" value="kabuki"> 歌舞伎
+                    		</label>
+                    		<label class="btn btn-success" style="width: calc(100%/3);">
+                    			<input name="code" type="radio" autocomplete="off" value="rakugo"> 落語
+                    		</label>
+                        </div>
+                        <br>
+    					<div class="">
+          				<input type="submit" class="btn btn-block btn-default" value="確認画面へ">
+          				</div>
 
     			</form>
     		</div>

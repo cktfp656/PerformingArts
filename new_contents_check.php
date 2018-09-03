@@ -1,4 +1,5 @@
 <?php 
+var_dump($_POST["code"]);
 
 $ext = substr($_FILES['picture_path']['name'], -4);
 $ext = strtolower($ext);
@@ -60,15 +61,18 @@ if($ext == '.jpg' || $ext =='.png' || $ext == '.gif'){
     	   <div class="row">
     		  <div class=" col-md-offset-2 col-md-5 col-md-offset-5">
                     <div class="well" style="text-align: center;">ご登録内容をご確認下さい。</div>
-    			<form method="POST" action="">
-                    <table class="table table-striped table-condensed">
+    			<form method="POST" action="new_contents_add.php" >
+                    <input type="hidden" name="contents_img_name" value="<?php echo $picture_name; ?>">
+                    <input type="hidden"  name="category_code" value="<?php echo ($_POST['code']); ?>">
+                <table class="table table-striped table-condensed">
                         <tbody>
                             <tr>
                                 <td><div class="text-center">プロフィール画像</div><div class="text-center"><img src="contents-img/<?php echo $picture_name; ?>" width="300" height="300"></div></td>
                             </tr>
+                            <tr><td><?php echo ($_POST['code']); ?></td></tr>
                         </tbody>
                     </table>
-                    <a href="index.php">&laquo;&nbsp;戻る</a> |
+                    <a href="index.php">&laquo;&nbsp;戻る</a>
                     <input type="submit" class="btn btn-default" value="登録">
     			</form>
     		</div>

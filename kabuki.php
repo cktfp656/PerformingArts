@@ -52,41 +52,42 @@
         <!-- /.container-fluid -->
     </nav>
 	<hr>
-	<div class="container" style="padding-top: 70px;">
-		<div class="row" style="border:2px solid;">
-			<div class="col-md-4" style="text-align;height:500;
-			overflow:auto;">
-				<div class="row">
-					<div class="col-md-6" style="text-align: center;">
-						<img src="img/portfolio/kabuki2.jpg"width="100" height="100"><br>
-						<p style="text-align:right;"><strong>Seedくん</strong></p>
-					</div>
-					<div class="col-md-8" style="text-align: left;">
-						<h2>一件の歌舞伎の画像に対するコメント</h2>
-						<small>20**/**/**</small>
+<div class="container" style="padding-top: 70px;">
+	<div class="row" style="border:2px solid;">
+		<div class="row">
+			 <div class="col-md-6">
+			 	<div class="row">
+			 		<div class="col-md-12" style="text-align: center;">
+						<textarea name="comment" rows="4" style="width:100%"></textarea>
+						<button class="btn btn-primary" >comment here</button>
 					</div>
 				</div>
-			</div>
-		<div class="col-md-4" style="text-align: center;background:red;
-			height:500px;">
-			<p>一件の画像に対する説明文</p>
-		</div>
-		<div class="col-md-4" style="text-align: center;background:green; height:500px;">
-			<img src="img/portfolio/kabuki2.jpg" style="width:100%">
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-12">
-				<form method="post" action="" class="form-horizontal" role="form">
-					<textarea name="comment" rows="4" style="width:100%"></textarea>
-					<div class="row" style=" height:70px;text-align: center;">
-						<div class="col-md-12">
-							<button class="btn btn-primary" >comment here</button>
-							<button class="btn btn-primary">top</button>
-						</div>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="img/portfolio/kabuki2.jpg" height="100" style="text-align :left;"><br>
+            			<p style="text-align:left;"><strong>Seedくん</strong></p>
+          			</div>
+          			<div class="col-md-9">
+
+          				コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
 					</div>
-				</form>
-			</div>
-		</div>
+          		</div>
+          	</div>
+
+
+			 
+			  <div class="col-md-6">
+			  	<img src="img/portfolio/kabuki2.jpg" style="width:70%">
+        <p>一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文</p>
+			  </div>
+
+			
+
+
+
+
+        </div>
+	</div>
+</div>
 </body>
 </html>

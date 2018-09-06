@@ -6,7 +6,7 @@ require('../db_connect.php');
 $nick_name = htmlspecialchars($_SESSION['join']['nick_name']);
 $email = htmlspecialchars($_SESSION['join']['email']);
 $password = htmlspecialchars($_SESSION['join']['password']);
-$picture_path = htmlspecialchars($_SESSION['join']['picture_path']);
+$picture_path = htmlspecialchars($_SESSION['join']['contents']);
 
 if(!empty($_POST)){
 	$sql = 'INSERT INTO`users` SET `name`=?,`email`=?,`password`=?,`img_name`=?,`created`=NOW()';

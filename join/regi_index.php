@@ -28,7 +28,7 @@ if(!empty($_POST)) {
 
 			if($ext == '.jpg' || $ext =='.png' || $ext == '.gif'){
 				$picture_name = date('YmdHis') . $_FILES['picture_path']['name'];
-				move_uploaded_file($_FILES['picture_path']['tmp_name'],'../contents-img/' . $picture_name);
+				move_uploaded_file($_FILES['picture_path']['tmp_name'],'../picture_path/'.$picture_name);
 
 				$_SESSION['join'] = $_POST;
 				$_SESSION['join']['contents'] = $picture_name;

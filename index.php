@@ -8,7 +8,33 @@ if(!isset($_SESSION['id'])){
   header('Location: login.php');
   exit();
 }
+  //       $sql = 'SELECT * FROM`comments` ORDER BY `created` DESC';
+  //       $stmt = $dbh->prepare($sql);
+  //       $stmt->execute();
+  //       $comments = array();
+  //     while(true){
+  //       $comment = $stmt->fetch(PDO::FETCH_ASSOC);
+  //       if($comment == false){
+  //           break;
+  //       }
+  //       $comments[] = $comment;
+  // }
 
+ $sql = 'SELECT`comments`.*,`users`.`id`,`users`.`name`,`users`.`img_name` FROM `comments` LEFT JOIN `users` ON `users`.`id`=`comments`.`user_id`ORDER BY`comments`.`created` DESC';
+        $stmt = $dbh->prepare($sql);
+        $stmt->execute();
+        $comments = array();
+      while(true){
+        $comment = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($comment == false){
+            break;
+        }
+        $comments[] = $comment;
+  }
+echo'<pre>';
+var_dump($comments);
+echo '</pre>';
+// exit;
  ?>
 
 
@@ -136,15 +162,12 @@ if(!isset($_SESSION['id'])){
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kabuki1.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kabuki2.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kabuki3.png" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kabuki4.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/yukata1.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kimono1.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kimono2.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kimono3.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/rakugo1.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/rakugo2.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/rakugo3.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/rakugo4.jpg" alt=""></div>
     </div>
     <!-- /row -->
   </div>
@@ -171,54 +194,25 @@ if(!isset($_SESSION['id'])){
             </div>
           </div>
         </div>
+
+
         <div class="col-sm-8" style="width:550px;height:550px;overflow:auto;">
+          <?php foreach ($comments as $comment): ?>
           <div class="row">
-            <div class="col-sm-4" style="text-align: right;">
-              <img src="http://c85c7a.medialib.glogster.com/taniaarca/media/71/71c8671f98762a43f6f50a282e20f0b82bdb1f8c/blog-images-1349202732-fondo-steve-jobs-ipad.jpg"
-              width="100" height="100"><br>
-              <p style="text-align: right;"><strong>Seedくん</strong></p>
+              <div class="col-sm-4" style="text-align: right;">
+                <img src="picture_path/<?php echo $comment['img_name']; ?>"
+                width="100" height="100"><br>
+                <p style="text-align: right;"><strong><?php echo $comment['name']; ?></strong></p>
+              </div>
+              <div class="col-sm-8" style="text-align: left;">
+                <h2><?php echo $comment['comment']; ?></h2>
+                <small><?php echo $comment['created']; ?></small>
+              </div>
             </div>
-            <div class="col-sm-8" style="text-align: left;">
-              <h2>着物いいね。</h2>
-              <small>2016-01-28 18:04</small>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4" style="text-align: right;">
-              <img src="http://c85c7a.medialib.glogster.com/taniaarca/media/71/71c8671f98762a43f6f50a282e20f0b82bdb1f8c/blog-images-1349202732-fondo-steve-jobs-ipad.jpg"
-              width="100" height="100"><br>
-              <p style="text-align: right;"><strong>Seedくん</strong></p>
-            </div>
-            <div class="col-sm-8" style="text-align: left;">
-              <h2>着物いいね。</h2>
-              <small>2016-01-28 18:04</small>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4" style="text-align: right;">
-              <img src="http://c85c7a.medialib.glogster.com/taniaarca/media/71/71c8671f98762a43f6f50a282e20f0b82bdb1f8c/blog-images-1349202732-fondo-steve-jobs-ipad.jpg"
-              width="100" height="100"><br>
-              <p style="text-align: right;"><strong>Seedくん</strong></p>
-            </div>
-            <div class="col-sm-8" style="text-align: left;">
-              <h2>着物いいね。</h2>
-              <small>2016-01-28 18:04</small>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4" style="text-align: right;">
-              <img src="http://c85c7a.medialib.glogster.com/taniaarca/media/71/71c8671f98762a43f6f50a282e20f0b82bdb1f8c/blog-images-1349202732-fondo-steve-jobs-ipad.jpg"
-              width="100" height="100"><br>
-              <p style="text-align: right;"><strong>Seedくん</strong></p>
-            </div>
-            <div class="col-sm-8" style="text-align: left;">
-              <h2>着物いいね。</h2>
-              <small>2016-01-28 18:04</small>
-            </div>
-          </div>
-            </div>
-          </div>
+            <?php endforeach ?>
         </div>
+
+
       </div>
     </div>
   </div>

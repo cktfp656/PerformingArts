@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><button class="btn btn-info"><a href="index.html" style="color: white;">contact</a></button></li>
-                    <li><button class="btn btn-warning"><a href="index.html" style="color: white;">login</a></button></li>
+                    <li><button class="btn btn-success"><a href="index.html" style="color: white;">login</a></button></li>
                     <li><button class="btn btn-danger"><a href="index.html" style="color: white;">logout</a></button></li>
                 </ul>
             </div>
@@ -52,35 +52,41 @@
         <!-- /.container-fluid -->
     </nav>
 	<hr>
-	<div class="container">
+	<div class="container" style="padding-top: 70px;">
 		<div class="row" style="border:2px solid;">
-			<div class="col-md-2" style="background:green; "></div>
-			<div class="col-md-10">
+			<div class="col-md-4" style="text-align;height:500;
+			overflow:auto;">
 				<div class="row">
 					<div class="col-md-6" style="text-align: center;">
-						<img src="img/portfolio/kabuki2.jpg"><br>
-						<img src="img/portfolio/kabuki2.jpg">
+						<img src="img/portfolio/kabuki2.jpg"width="100" height="100"><br>
+						<p style="text-align:right;"><strong>Seedくん</strong></p>
 					</div>
-					<div class="col-md-6" style="text-align: center;background:green">
-						<img src="img/portfolio/kabuki2.jpg">
-						<img src="img/portfolio/kabuki2.jpg">
+					<div class="col-md-8" style="text-align: left;">
+						<h2>一件の歌舞伎の画像に対するコメント</h2>
+						<small>20**/**/**</small>
 					</div>
 				</div>
-
-
+			</div>
+		<div class="col-md-4" style="text-align: center;background:red;
+			height:500px;">
+			<p>一件の画像に対する説明文</p>
+		</div>
+		<div class="col-md-4" style="text-align: center;background:green; height:500px;">
+			<img src="img/portfolio/kabuki2.jpg" style="width:100%">
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post" action="" class="form-horizontal" role="form">
+					<textarea name="comment" rows="4" style="width:100%"></textarea>
+					<div class="row" style=" height:70px;text-align: center;">
+						<div class="col-md-12">
+							<button class="btn btn-primary" >comment here</button>
+							<button class="btn btn-primary">top</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
-		<form method="post" action="" class="form-horizontal" role="form">
-		<div class="row">
-			<div class="col-md-3"></div>
-				<div class="col-md-6" style="background: red;height:120px;"><textarea name="comment"  rows="4" style="width:100%;"></textarea></div>
-				 <div class=col-md-3" height:120px"></div>
-		</div>
-		<div class="row" style="border:2px solid; height:70px;text-align: center;">
-			<div class="col-md-4"></div>
-			<div class="col-md-4" ><button class="btn btn-primary" >comment here</button><button class="btn btn-primary">top</div></button></div>
-			<div class="col-md-4"></div>
-		</div>
-		</form>
 </body>
 </html>

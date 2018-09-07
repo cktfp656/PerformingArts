@@ -75,17 +75,10 @@
           	</div>
 
 
-			 
 			  <div class="col-md-6">
 			  	<img src="img/portfolio/kabuki2.jpg" style="width:70%">
         <p>一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文</p>
 			  </div>
-
-			
-
-
-
-
         </div>
 	</div>
 </div>

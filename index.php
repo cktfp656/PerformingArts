@@ -20,7 +20,7 @@ if(!isset($_SESSION['id'])){
   //       $comments[] = $comment;
   // }
 
- $sql = 'SELECT`comments`.*,`users`.`id`,`users`.`name`,`users`.`img_name` FROM `comments` LEFT JOIN `users` ON `users`.`id`=`comments`.`user_id`ORDER BY`comments`.`created` DESC';
+ $sql = 'SELECT`comments`.*,`users`.`name`,`users`.`img_name` FROM `comments` LEFT JOIN `users` ON `users`.`id`=`comments`.`user_id`ORDER BY`comments`.`created` DESC';
         $stmt = $dbh->prepare($sql);
         $stmt->execute();
         $comments = array();

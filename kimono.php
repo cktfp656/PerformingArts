@@ -55,37 +55,32 @@
 	<hr>
 	<div class="container" style="padding-top: 70px;">
 		<div class="row" style="border:2px solid;">
-			<div class="col-md-4" style="text-align;height:500;
-			overflow:auto;">
-				<div class="row">
-					<div class="col-md-4" style="text-align: right;">
-						<img src="http://c85c7a.medialib.glogster.com/taniaarca/media/71/71c8671f98762a43f6f50a282e20f0b82bdb1f8c/blog-images-1349202732-fondo-steve-jobs-ipad.jpg" width="100" height="100"><br>
-						<p style="text-align:right;"><strong>Seedくん</strong></p>
-					</div>
-					<div class="col-md-8" style="text-align: left;">
-						<h2>一件の着物の画像に対するコメント</h2>
-						<small>20**/**/**</small>
-					</div>
-				</div>
-			</div>
-	<div class="col-md-4" style="text-align: center;background:yellow;
-		height:500px;">
-		<p>一件の画像に対する説明文</p>
-	</div>
-	<div class="col-md-4" style="text-align: center;background:blue; height:500px;">
-		<img src="img/portfolio/kimono2.jpg" style="width:100%">
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-md-12">
-			<form method="post" action="" class="form-horizontal" role="form">
-				<textarea name="comment" rows="4" style="width:100%"></textarea>
-				<div class="row" style=" height:70px;text-align: center;">
-					<div class="col-md-12">
+			<div class="row">
+			 <div class="col-md-6">
+			 	<div class="row">
+			 		<div class="col-md-12" style="text-align: center;">
+						<textarea name="comment" rows="4" style="width:100%"></textarea>
 						<button class="btn btn-primary" >comment here</button>
-						<button class="btn btn-primary">top</button>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="img/portfolio/kimono2.jpg" height="100" style="text-align :left;"><br>
+            			<p style="text-align:left;"><strong>Seedくん</strong></p>
+          			</div>
+          			<div class="col-md-9">
+
+          				コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
+					</div>
+          		</div>
+          	</div>
+
+
+			 
+			  <div class="col-md-6">
+			  	<img src="img/portfolio/kimono2.jpg" style="width:70%">
+        <p>一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文</p>
+			  </div>
 			</form>
 		</div>
 	</div>

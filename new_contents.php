@@ -49,6 +49,7 @@
     			 <div class="well" style="text-align: center;">画像の登録をして下さい。</div>
         			<form method="POST" action="new_contents_check.php" class=""form-horizontal" role="form" enctype="multipart/form-data">
            				<input type="file" name="picture_path" class="form-control">
+                        <textarea name="" id="" cols="77" rows="3" placeholder="説明文を入力して下さい"></textarea>
                         <div class="btn-group" data-toggle="buttons" style="width: 555px;">
                             <label class="btn btn-success active" style="width: calc(100%/3);">
                                 <input name="code" type="radio" autocomplete="off" value="kimono" checked> 着物

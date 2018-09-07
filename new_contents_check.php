@@ -64,11 +64,16 @@ if($ext == '.jpg' || $ext =='.png' || $ext == '.gif'){
     			<form method="POST" action="new_contents_add.php" >
                     <input type="hidden" name="contents_img_name" value="<?php echo $picture_name; ?>">
                     <input type="hidden"  name="category_code" value="<?php echo ($_POST['code']); ?>">
+                    <input type="hidden" name="description" value="<?php echo ($_POST['description']);?>">
                 <table class="table table-striped table-condensed">
                         <tbody>
                             <tr>
                                 <td><div class="text-center">プロフィール画像</div><div class="text-center"><img src="contents-img/<?php echo $picture_name; ?>" width="300" height="300"></div></td>
                             </tr>
+                            <tr>
+                                <td>
+                                <?php echo ($_POST['description'])?>
+                            </td></tr>
                             <tr><td><?php echo ($_POST['code']); ?></td></tr>
                         </tbody>
                     </table>

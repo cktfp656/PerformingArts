@@ -7,6 +7,28 @@
             $stmt = $dbh->prepare($sql);
             $stmt ->execute($data);
 }
+
+//着物のコンテンツを取得するSQL文作成
+$sql='SELECT * FROM `contents` WHERE `category_code` = "kimono"';
+//SQL実行
+$stmt = $dbh->prepare($sql);
+$stmt ->execute();
+//取得したデータを配列に格納
+$kimono_contents = array();
+while(true){
+        $kimono = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($kimono == false){
+            break;
+        }
+        $kimono_contents[] = $kimono;
+
+    }
+    // echo'<pre>';
+    // var_dump($kimono_contents);
+    // echo'</pre>';
+    // exit;
+
+
  ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -55,34 +77,11 @@
 	<hr>
 	<div class="container" style="padding-top: 70px;">
 		<div class="row" style="border:2px solid;">
-			<div class="row">
-			 <div class="col-md-6">
-			 	<div class="row">
-			 		<div class="col-md-12" style="text-align: center;">
-						<textarea name="comment" rows="4" style="width:100%"></textarea>
-						<button class="btn btn-primary" >comment here</button>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/portfolio/kimono2.jpg" height="100" style="text-align :left;"><br>
-            			<p style="text-align:left;"><strong>Seedくん</strong></p>
-          			</div>
-          			<div class="col-md-9">
-
-          				コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
-					</div>
-          		</div>
-          	</div>
-
-
-			 
-			  <div class="col-md-6">
-			  	<img src="img/portfolio/kimono2.jpg" style="width:70%">
-        <p>一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文</p>
-			  </div>
-			</form>
-		</div>
+			<?php foreach ($kimono_contents as $kimono): ?>
+			<div class="col-md-6">
+				<?php include("kimono_card.php") ?>
+			</div>
+			<?php endforeach ?>
 	</div>
 </body>
 </html>

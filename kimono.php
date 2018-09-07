@@ -7,7 +7,6 @@
             $stmt = $dbh->prepare($sql);
             $stmt ->execute($data);
 }
-
 //着物のコンテンツを取得するSQL文作成
 $sql='SELECT * FROM `contents` WHERE `category_code` = "kimono"';
 //SQL実行
@@ -21,14 +20,11 @@ while(true){
             break;
         }
         $kimono_contents[] = $kimono;
-
     }
     // echo'<pre>';
     // var_dump($kimono_contents);
     // echo'</pre>';
     // exit;
-
-
  ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -82,6 +78,7 @@ while(true){
 				<?php include("kimono_card.php") ?>
 			</div>
 			<?php endforeach ?>
-	</div>
+	   </div>
+    </div>
 </body>
 </html>

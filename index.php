@@ -31,9 +31,9 @@ if(!isset($_SESSION['id'])){
         }
         $comments[] = $comment;
   }
-echo'<pre>';
-var_dump($comments);
-echo '</pre>';
+// echo'<pre>';
+// var_dump($comments);
+// echo '</pre>';
 // exit;
  ?>
 

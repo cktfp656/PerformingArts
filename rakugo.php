@@ -7,6 +7,20 @@
             $stmt = $dbh->prepare($sql);
             $stmt ->execute($data);
 }
+//落語のコンテンツを取得するSQL文作成
+$sql='SELECT * FROM `contents` WHERE `category_code` = "rakugo"';
+//SQL実行
+$stmt = $dbh->prepare($sql);
+$stmt ->execute();
+//取得したデータを配列に格納
+$rakugo_contents = array();
+while(true){
+        $rakugo = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($rakugo == false){
+            break;
+        }
+        $rakugo_contents[] = $rakugo;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,33 +62,11 @@
     </nav>
     <div class="container" style="padding-top: 70px;">
     	<div class="row" style="border:2px solid;">
-			<div class="row">
-			 <div class="col-md-6">
-			 	<div class="row">
-			 		<div class="col-md-12" style="text-align: center;">
-						<textarea name="comment" rows="4" style="width:100%"></textarea>
-						<button class="btn btn-primary" >comment here</button>
-					</div>
+			<?php foreach ($rakugo_contents as $rakugo): ?>
+				<div class=col-md-6>
+					<?php include("rakugo_card.php") ?>
 				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/portfolio/rakugo2.jpg" height="100" style="text-align :left;"><br>
-            			<p style="text-align:left;"><strong>Seedくん</strong></p>
-          			</div>
-          			<div class="col-md-9">
-
-          				コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
-					</div>
-          		</div>
-          	</div>
-
-
-			 
-			  <div class="col-md-6">
-			  	<img src="img/portfolio/rakugo2.jpg" style="width:70%">
-        <p>一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文</p>
-			  </div>
-			</div>
+			<?php endforeach ?>
 		</div>
 		<br>
 				</div>

@@ -1,4 +1,3 @@
-
 <?php
 	session_start();
 	require('db_connect.php');
@@ -8,16 +7,36 @@
             $stmt = $dbh->prepare($sql);
             $stmt ->execute($data);
 }
-
-
+//着物のコンテンツを取得するSQL文作成
+$sql='SELECT * FROM `contents` WHERE `category_code` = "kabuki"';
+//SQL実行
+$stmt = $dbh->prepare($sql);
+$stmt ->execute();
+//取得したデータを配列に格納
+$kabuki_contents = array();
+while(true){
+        $kabuki = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($kabuki == false){
+            break;
+        }
+        $kabuki_contents[] = $kabuki;
+    }
+    // echo'<pre>';
+    // var_dump($kimono_contents);
+    // echo'</pre>';
+    // exit;
  ?>
  <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+
 	<!-- Bootstrap -->
 	<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -52,35 +71,14 @@
         <!-- /.container-fluid -->
     </nav>
 	<hr>
-<div class="container" style="padding-top: 70px;">
-	<div class="row" style="border:2px solid;">
-		<div class="row">
-			 <div class="col-md-6">
-			 	<div class="row">
-			 		<div class="col-md-12" style="text-align: center;">
-						<textarea name="comment" rows="4" style="width:100%"></textarea>
-						<button class="btn btn-primary" >comment here</button>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/portfolio/kabuki2.jpg" height="100" style="text-align :left;"><br>
-            			<p style="text-align:left;"><strong>Seedくん</strong></p>
-          			</div>
-          			<div class="col-md-9">
-
-          				コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
-					</div>
-          		</div>
-          	</div>
-
-
-			  <div class="col-md-6">
-			  	<img src="img/portfolio/kabuki2.jpg" style="width:70%">
-        <p>一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文一件の画像に対する説明文</p>
-			  </div>
-        </div>
-	</div>
-</div>
+	<div class="container" style="padding-top: 70px;">
+		<div class="row" style="border:2px solid;">
+			<?php foreach ($kabuki_contents as $kabuki): ?>
+			<div class="col-md-6">
+				<?php include("kabuki_card.php") ?>
+			</div>
+			<?php endforeach ?>
+	   </div>
+    </div>
 </body>
 </html>

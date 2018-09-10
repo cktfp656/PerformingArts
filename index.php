@@ -167,15 +167,15 @@ if(!isset($_SESSION['id'])){
       <div id="home-row-2" class="row clearfix">
 
         <div class="col-12 col-sm-4">
-          <a href="kabuki.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso1.jpg"></div><span>kabuki</span></a>
+          <a href="kabuki.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kabukikari.png"></div><span>kabuki</span></a>
         </div>
 
         <div class="col-12 col-sm-4">
-          <a href="kimono.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso1.jpg"></div><span>kimono</span></a>
+          <a href="kimono.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kimonokari.png"></div><span>kimono</span></a>
         </div>
 
         <div class="col-12 col-sm-4">
-          <a href="rakugo.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/kawauso1.jpg"></div><span>rakugo</span></a>
+          <a href="rakugo.php" class="navigation-slide-a"><div class="home-hover navigation-slide"><img src="img/rakugokari.png"></div><span>rakugo</span></a>
         </div>
       </div>
       <!-- /row -->

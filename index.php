@@ -69,6 +69,14 @@ if(!isset($_SESSION['id'])){
        $rakugo_contents[] = $rakugo;
 
     }
+    if(!empty($_POST)){
+      $sql = 'INSERT INTO `inquiries`(`user_id`,`name`,`email`,`subject`,`message`,`created` VALUES (?,?,?,?,?,now())';
+      $data = array($_SESSION['id'],$_POST['user_id'],$_POST['name'],$_POST['email'],$_POST['subject'],$_POST['message']);
+      $stmt = $dbh->prepare($sql);
+      $stmt->execute($data);
+
+      header('Locatioj: index.php');
+    }
 // echo'<pre>';
 // var_dump($kabuki_contents);
 // echo '</pre>';
@@ -82,7 +90,7 @@ if(!isset($_SESSION['id'])){
 
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Performing Arts</title>
@@ -150,7 +158,6 @@ if(!isset($_SESSION['id'])){
       <div id="home-row-1" class="row clearfix">
         <div class="col-12">
           <h1 class="font-semibold">Performing Arts</h1>
-          <h4 class="font-thin">日本の伝統芸能</h4>
           <br>
           <br>
         </div>
@@ -182,7 +189,7 @@ if(!isset($_SESSION['id'])){
     <div class="container">
       <div class="row title-row">
         <div class="col-12 font-thin">name: Yamazaki Keiko <span class="font-semibold"></span> <br> hometown: Kochi in Japan
-        <br>like:Rakugo,Kabuki,kimono,travel,Anime</div>
+        <br>like:Rakugo,Kabuki,Kimono,Travel,Anime</div>
       </div>
       <!-- /row -->
       <div class="row subtitle-row">
@@ -211,7 +218,7 @@ if(!isset($_SESSION['id'])){
     <!-- /row -->
   </div>
   <!-- /slide3 -->
-
+</div>
   <!-- === Slide 5 === -->
   <div class="slide story" id="clients" data-slide="5">
     <div class="container">
@@ -308,7 +315,7 @@ if(!isset($_SESSION['id'])){
 
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
+          <form class="contact-form php-mail-form" role="form" action="" method="POST">
             <div class="form-group">
               <label for="contact-name">Your Name</label>
               <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >

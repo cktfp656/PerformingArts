@@ -30,12 +30,25 @@ if(!isset($_SESSION['id'])){
             break;
         }
         $comments[] = $comment;
-  }
+      }
+
+    $sql='SELECT * FROM `contents` WHERE `category_code` = "kabuki" ORDER BY   `created` DESC LIMIT 0,3';
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $kabuki_contents =array();
+    while(true){
+      $kabuki = $stmt->fetch(PDO::FETCH_ASSOC);
+      if($kabuki== false){
+        break;
+      }
+       $kabuki_contents[] = $kabuki;
+
+    }
 // echo'<pre>';
-// var_dump($comments);
+// var_dump($kabuki_contents);
 // echo '</pre>';
 // exit;
- ?>
+?>
 
 
 
@@ -159,9 +172,10 @@ if(!isset($_SESSION['id'])){
   <!-- === SLide 3 - Portfolio -->
   <div class="slide story" id="portfolio" data-slide="3">
     <div class="row">
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kabuki1.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kabuki2.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kabuki3.png" alt=""></div>
+
+      <?php foreach ($kabuki_contents as $kabuki) { ?>
+        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $kabuki['contents_img_name']; ?>" alt=""></div>
+      <?php } ?>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/yukata1.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kimono1.jpg" alt=""></div>
       <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kimono2.jpg" alt=""></div>

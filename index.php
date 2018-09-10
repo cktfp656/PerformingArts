@@ -44,6 +44,31 @@ if(!isset($_SESSION['id'])){
        $kabuki_contents[] = $kabuki;
 
     }
+
+    $sql='SELECT * FROM `contents` WHERE `category_code` = "kimono" ORDER BY   `created` DESC LIMIT 0,3';
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $kimono_contents =array();
+    while(true){
+      $kimono = $stmt->fetch(PDO::FETCH_ASSOC);
+      if($kimono== false){
+        break;
+      }
+       $kimono_contents[] = $kimono;
+
+    }
+    $sql='SELECT * FROM `contents` WHERE `category_code` = "rakugo" ORDER BY   `created` DESC LIMIT 0,3';
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $rakugo_contents =array();
+    while(true){
+      $rakugo = $stmt->fetch(PDO::FETCH_ASSOC);
+      if($rakugo== false){
+        break;
+      }
+       $rakugo_contents[] = $rakugo;
+
+    }
 // echo'<pre>';
 // var_dump($kabuki_contents);
 // echo '</pre>';
@@ -176,13 +201,13 @@ if(!isset($_SESSION['id'])){
       <?php foreach ($kabuki_contents as $kabuki) { ?>
         <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $kabuki['contents_img_name']; ?>" alt=""></div>
       <?php } ?>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/yukata1.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kimono1.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/kimono2.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/rakugo1.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/rakugo2.jpg" alt=""></div>
-      <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="img/portfolio/rakugo3.jpg" alt=""></div>
-    </div>
+      
+      <?php foreach ($kimono_contents as $kimono) { ?>
+        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $kimono['contents_img_name']; ?>" alt=""></div>
+      <?php } ?>
+      <?php foreach ($rakugo_contents as $rakugo) { ?>
+        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $rakugo['contents_img_name']; ?>" alt=""></div>
+      <?php } ?>
     <!-- /row -->
   </div>
   <!-- /slide3 -->

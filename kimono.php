@@ -21,6 +21,18 @@ while(true){
         }
         $kimono_contents[] = $kimono;
     }
+     $sql='SELECT * FROM `contents` WHERE `category_code` = "kimono" ORDER BY   `created` DESC LIMIT 0,3';
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $kabuki_contents =array();
+    while(true){
+      $kimono = $stmt->fetch(PDO::FETCH_ASSOC);
+      if($kimono== false){
+        break;
+      }
+       $kimono_contents[] = $kimono;
+
+    }
     // echo'<pre>';
     // var_dump($kimono_contents);
     // echo'</pre>';

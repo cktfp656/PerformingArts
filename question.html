@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Performing Arts</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="keywords">
-	<meta content="" name="description">
-	<link href="img/favicon.png" rel="icon">
-	<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext" rel="stylesheet">
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="lib/fancybox/fancybox.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link rel="prefetch" href="img/zoom.png">
+	<meta charset="UTF-8">
+	<!DOCTYPE html>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- Bootstrap -->
+	<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="lib/bootstrap/css/form.css" rel="stylesheet">
+	<link href="lib/bootstrap/css/timeline.css" rel="stylesheet">
+	<link href="lib/bootstrap/css/main.css" rel="stylesheet">
+	<!-- designフォルダ内では2つパスの位置を戻ってからcssにアクセスしていることに注意!!! -->
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top" style="background: black;">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<i class="fa fa-bars"></i>
-				</button>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li style="padding-top: 10px; padding-right: 10px;"><img src="img/kawauso1.jpg" alt="" style=" width: 40px;height:40px"></li>
-					<li class="active"><a href="index.php">Performing Arts</a></li>
-					<li><a href="join/regi_index.php">Resiter</a></li>
-					<li><a href="new_contents.php">My Page</a></li>
-					<li><a href="logout.php">logout</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php"><img src="img/logo.png"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><button class="btn btn-info"><a href="kimono.php" style="color: white;">kimono</a></button></li>
+                    <li><button class="btn btn-info"><a href="kabuki.php" style="color: white;">kabuki</a></button></li>
+                    <li><button class="btn btn-info"><a href="rakugo.php" style="color: white;">rakugo</a></button></li>
+                    <li><button class="btn btn-primary"><a href="index.php#portfolid" style="color: white;">photos</a></button></li>
+                    <li><button class="btn btn-warning"><a href="index.php#clients" style="color: white;">comments</a></button></li>
+                    <li><button class="btn btn-success"><a href="login.php" style="color: white;">login</a></button></li>
+                    <li><button class="btn btn-danger"><a href="logout.php" style="color: white;">logout</a></button></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="padding-top: 70px;"></div>

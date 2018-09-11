@@ -2,7 +2,6 @@
 session_start();
 
 require('db_connect.php');
-echo'<br>';
 
 if(!isset($_SESSION['id'])){
   header('Location: login.php');
@@ -70,12 +69,12 @@ if(!isset($_SESSION['id'])){
 
     }
     if(!empty($_POST)){
-      $sql = 'INSERT INTO `inquiries`(`user_id`,`name`,`email`,`subject`,`message`,`created` VALUES (?,?,?,?,?,now())';
+      $sql = 'INSERT INTO `inquiries`( `user_id`, `name`, `email`, `subject`, `message`, `created`) VALUES (?,?,?,?,?,now())';
       $data = array($_SESSION['id'],$_POST['user_id'],$_POST['name'],$_POST['email'],$_POST['subject'],$_POST['message']);
       $stmt = $dbh->prepare($sql);
       $stmt->execute($data);
 
-      header('Locatioj: index.php');
+      header('Location: index.php');
     }
 // echo'<pre>';
 // var_dump($kabuki_contents);
@@ -137,13 +136,13 @@ if(!isset($_SESSION['id'])){
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li style="padding-top: 10px; padding-right: 10px;"><img src="img/kawauso1.jpg" alt="" style=" width: 40px;height:40px"></li>
-          <li class="active"><a href="#intro" class="smoothscroll">Performing Arts</a></li>
+          <li class="active"><a href="#intro" class="smmthscrll"><img src="img/logo.png" style="width: 20px height:20px"></a></li>
           <li><a href="#about-us" class="smoothscroll">About Me</a></li>
           <li><a href="join/regi_index.php" >Resiter</a></li>
-          <li><a href="#portfolio" class="smoothscroll">Portfolio</a></li>
-          <li><a href="#clients" class="smoothscroll">Clients</a></li>
+          <li><a href="#portfolio" class="smoothscroll">Photos</a></li>
+          <li><a href="#clients" class="smoothscroll">Comments</a></li>
           <li><a href="new_contents.php">My Page</a></li>
+          <li><a href="question.html">Inquiries</a></li>
           <li><a href="#contact" class="smoothscroll">Contact</a></li>
           <li><a href="logout.php" >logout</a></li>
         </ul>
@@ -300,7 +299,7 @@ if(!isset($_SESSION['id'])){
         </div>
         <!-- /col12 -->
         <div class="col-12 col-sm-2 with-hover-text">
-          <p><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></p>
+          <p><a target="_blank" href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></p>
           <span class="hover-text font-light ">facebook</span></a>
         </div>
         <!-- /col12 -->
@@ -363,7 +362,7 @@ if(!isset($_SESSION['id'])){
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
+  <!-- <script src="lib/php-mail-form/validate.js"></script> -->
   <script src="lib/fancybox/fancybox.js"></script>
 
   <!-- Template Main Javascript File -->

@@ -52,8 +52,6 @@ while(true){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!DOCTYPE html>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
@@ -65,8 +63,9 @@ while(true){
     <link href="lib/bootstrap/css/timeline.css" rel="stylesheet">
     <link href="lib/bootstrap/css/main.css" rel="stylesheet">
     <!-- designフォルダ内では2つパスの位置を戻ってからcssにアクセスしていることに注意!!! -->
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
-<body style="background-image: url('img/kabuki_back.png');background-position: center center;background-repeat: no-repeat; background-attachment: fixed;background-size: cover;">
+<body style="background-image: url('img/kimonogara.png');background-position: center center;background-repeat: no-repeat; background-attachment: fixed;background-size: cover;">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->

@@ -63,7 +63,7 @@ while(true){
     <link href="lib/bootstrap/css/main.css" rel="stylesheet">
     <!-- designフォルダ内では2つパスの位置を戻ってからcssにアクセスしていることに注意!!! -->
 </head>
-<body style="background-image: url('img/kabuki_back.png');background-position: center center;background-repeat: no-repeat; background-attachment: fixed;background-size: cover;">
+<body style="background-image: url('img/wakamatu.png');background-position: center center;background-repeat: no-repeat; background-attachment: fixed;background-size: cover;">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->

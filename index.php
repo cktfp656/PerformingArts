@@ -113,7 +113,7 @@ if(!isset($_SESSION['id'])){
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="prefetch" href="img/zoom.png">
 
   <!-- =======================================================

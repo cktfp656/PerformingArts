@@ -190,7 +190,7 @@ body {
 }
 
 #about-us {
-  background-color: hotpink;
+  background-color: royalblue;
   color: #e4e6e5;
   padding-top: 90px;
 }
@@ -326,13 +326,13 @@ i {
 }
 
 #clients {
-  background-color: #f39c12;
+  background-color: royalblue;
   color: #e4e6e5;
   padding-top: 90px;
 }
 
 #contact {
-  background-color: #2f2f2f;
+  background-color: gray;
   color: #e4e6e5;
   padding-bottom: 50px;
   padding-top: 90px;

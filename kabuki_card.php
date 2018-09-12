@@ -13,7 +13,7 @@
 			<?php foreach ($kabuki['comment'] as $kabuki_comment): ?>
 			<div class="row">
 				<div class="col-md-5">
-					<img src="img/portfolio/kabuki2.jpg" height="60" style="text-align :left;"><br>
+					<img src="picture_path/<?php echo $kabuki_comment['img_name']; ?>" height="60" style="text-align :left;"><br>
 					<p style="text-align:left;"><strong><?php echo $kabuki_comment['name']; ?></strong></p>
 				</div>
 					<div class="col-md-7">

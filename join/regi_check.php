@@ -83,13 +83,13 @@ if(!empty($_POST)){
 								<td><div class="text-center"> *******</div></td>
 							</tr>
 							<tr>
-								<td><div class="text-center">プロフィール画像</div></td>
+								<td><div class="text-center">profile_image</div></td>
 								<td><div class="text-center"><img src="../picture_path/<?php echo $picture_path; ?>" width="100" height="100"></div></td>
 							</tr>
 						</tbody>
 					</table>
 
-					<a href="index.php">&laquo;&nbsp;書き直す</a> |
+					<a href="regi_index.php?action=rewrite">&laquo;&nbsp;To rewrite</a> |
 					<input type="submit" class="btn btn-default" value="会員登録">
 				</form>
 			</div>

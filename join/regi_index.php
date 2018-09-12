@@ -42,6 +42,16 @@ if(!empty($_POST)) {
 } //post送信された時の閉じかっこ
 
 
+	if(!empty($_GET) && $_GET['action'] == 'rewrite'){
+		$nick_name = $_SESSION['join']['nick_name'];
+		$email = $_SESSION['join']['email'];
+		$password = $_SESSION['join']['password'];
+	}else{
+		$nick_name = '';
+		$email = '';
+		$password = '';
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -95,7 +105,7 @@ if(!empty($_POST)) {
 					<div class="form-group">
 						<label class="col-sm-4 control-label">nickname</label>
 						<div class="col-sm-8">
-							<input type="text" name="nick_name" class="form-control" placeholder="例： Seed kun">
+							<input type="text" name="nick_name" class="form-control" placeholder="例： Seed kun" value="<?php echo $nick_name; ?>">
 
 							<?php if(isset($error['nick_name'])): ?>
 
@@ -108,7 +118,7 @@ if(!empty($_POST)) {
 					<div class="form-group">
 						<label class="col-sm-4 control-label">email</label>
 						<div class="col-sm-8">
-							<input type="email" name="email" class="form-control" placeholder="例： seed@nex.com">
+							<input type="email" name="email" class="form-control" placeholder="例： seed@nex.com" value="<?php echo $email; ?>">
 
 							<?php if(isset($error['email'])): ?>
 								<p class="error">*メールアドレスを入力して下さい。></p>
@@ -120,7 +130,7 @@ if(!empty($_POST)) {
 					<div class="form-group">
 						<label class="col-sm-4 control-label">password</label>
 						<div class="col-sm-8">
-							<input type="password" name="password" class="form-control" placeholder="">
+							<input type="password" name="password" class="form-control" placeholder="" value="<?php echo $password; ?>">
 							<?php if(isset($error['password']) && $error['password'] == 'blank'):?>
 							<p class="error">*パスワードを入力して下さい。</p>
 

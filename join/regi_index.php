@@ -21,7 +21,7 @@ if(!empty($_POST)) {
 	}
 	if(!isset($error) && !empty($_FILES)){
 		if($_FILES['picture_path']['name'] ==''){
-			$error['picture_path'] = 'blank';
+			$error['picture_path'] = 'type';
 		}else{
 			$ext = substr($_FILES['picture_path']['name'], -4);
 			$ext = strtolower($ext);
@@ -122,10 +122,10 @@ if(!empty($_POST)) {
 						<div class="col-sm-8">
 							<input type="password" name="password" class="form-control" placeholder="">
 							<?php if(isset($error['password']) && $error['password'] == 'blank'):?>
-							<p class="error">*パスワードを入力して下さい。</p>)
+							<p class="error">*パスワードを入力して下さい。</p>
 
 							<?php elseif(isset($error['password']) && $error['password'] == 'legend'): ?>
-									<p class="error">*パスワードは6文字以上入力してください＿。</p>
+									<p class="error">*パスワードは6文字以上入力してください。</p>
 									<?php  endif ?>
 						</div>
 					</div>

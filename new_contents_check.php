@@ -44,11 +44,16 @@ if($ext == '.jpg' || $ext =='.png' || $ext == '.gif'){
                 </button>
                 <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
             </div>
+            <div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li><button class="btn btn-info"><a href="index.html" style="color: white;">contents</a></button></li>
-                    <li><button class="btn btn-warning"><a href="index.html" style="color: white;">login</a></button></li>
-                    <li><button class="btn btn-danger"><a href="index.html" style="color: white;">logout</a></button></li>
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><button class="btn btn-info"><a href="kimono.php" style="color: white;">kimono</a></button></li>
+                    <li><button class="btn btn-info"><a href="kabuki.php" style="color: white;">kabuki</a></button></li>
+                    <li><button class="btn btn-info"><a href="rakugo.php" style="color: white;">rakugo</a></button></li>
+                    <li><button class="btn btn-primary"><a href="index.php#portfolid" style="color: white;">photos</a></button></li>
+                    <li><button class="btn btn-warning"><a href="index.php#clients" style="color: white;">comments</a></button></li>
+                    <li><button class="btn btn-success"><a href="login.php" style="color: white;">login</a></button></li>
+                    <li><button class="btn btn-danger"><a href="logout.php" style="color: white;">logout</a></button></li>
                 </ul>
             </div>
         </div>

@@ -2,22 +2,29 @@
 	<div class="col-md-6">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
+				<form action="rakugo.php" method="POST">
 				<textarea name="comment" rows="4" style="width:100%"></textarea>
-				<button class="btn btn-primary" >comment here</button>
+				<input type="hidden" name="content_id" value="<?php echo $rakugo['id'];?>">
+				<button  type= "submit" class="btn btn-block btn-primary">comment here</button><br>
+				</form>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">
-				<img src="img/portfolio/rakugo2.jpg" height="100" style="text-align :left;"><br>
-				<p style="text-align:left;"><strong>Seedくん</strong></p>
+		<div style="overflow: scroll;height:200px;">
+			<?php foreach ($rakugo['comment'] as $rakugo_comment): ?>
+			<div class="row">
+				<div class="col-md-5">
+					<img src="img/portfolio/kabuki2.jpg" height="60" style="text-align :left;"><br>
+					<p style="text-align:left;"><strong><?php echo $rakugo_comment['name']; ?></strong></p>
+				</div>
+					<div class="col-md-7">
+						<?php echo $rakugo_comment['comment']; ?>
+					</div>
 			</div>
-			<div class="col-md-9">
-				コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
+			<?php endforeach ?>
 			</div>
 		</div>
-	</div>
-	<div class="col-md-6">
-		<img src="contents-img/<?php echo $rakugo['contents_img_name']; ?>" style="width:70%">
-		<p><?php echo $rakugo['description']; ?></p>
-	</div>
+					<div class="col-md-6">
+						<img src="contents-img/<?php echo $rakugo['contents_img_name']; ?>" style="width:70%">
+						<p><?php echo $rakugo['description']; ?></p>
+					</div>
 </div>

@@ -136,13 +136,13 @@ if(!isset($_SESSION['id'])){
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro" class="smmthscrll"><img src="img/logo.png" style="width: 20px height:20px"></a></li>
+          <li class="active"><a href="#intro" class="smmthscrll"><img src="img/logo.png" height="30"></a></li>
           <li><a href="#about-us" class="smoothscroll">About Me</a></li>
           <li><a href="join/regi_index.php" >Resiter</a></li>
           <li><a href="#portfolio" class="smoothscroll">Photos</a></li>
           <li><a href="#clients" class="smoothscroll">Comments</a></li>
           <li><a href="new_contents.php">My Page</a></li>
-          <li><a href="question.html">Inquiries</a></li>
+          <li><a href="question.php">Inquiries</a></li>
           <li><a href="#contact" class="smoothscroll">Contact</a></li>
           <li><a href="logout.php" >logout</a></li>
         </ul>
@@ -353,7 +353,7 @@ if(!isset($_SESSION['id'])){
         &copy; Copyrights <strong>Performing</strong>. All Rights Reserved
       </p>
       <div class="credits">
-        Created with Performing Arts by <a href="https://templatemag.com/">Keiko Yamazaki</a>
+        Created with Performing Arts by <a href="#">Keiko Yamazaki</a>
       </div>
     </div>
   </div>

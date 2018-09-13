@@ -42,19 +42,22 @@ if($ext == '.jpg' || $ext =='.png' || $ext == '.gif'){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+                <a class="navbar-brand" href="index.php"><img src="img/logo.png" height="50"></a>
             </div>
-            <div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-                 <ul class="nav navbar-nav navbar-right">
-                    <li><button class="btn btn-info"><a href="kimono.php" style="color: white;">kimono</a></button></li>
-                    <li><button class="btn btn-info"><a href="kabuki.php" style="color: white;">kabuki</a></button></li>
-                    <li><button class="btn btn-info"><a href="rakugo.php" style="color: white;">rakugo</a></button></li>
-                    <li><button class="btn btn-primary"><a href="index.php#portfolid" style="color: white;">photos</a></button></li>
-                    <li><button class="btn btn-warning"><a href="index.php#clients" style="color: white;">comments</a></button></li>
-                    <li><button class="btn btn-success"><a href="login.php" style="color: white;">login</a></button></li>
-                    <li><button class="btn btn-danger"><a href="logout.php" style="color: white;">logout</a></button></li>
-                </ul>
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="kabuki.php"><img src="img/kabuki1.png" width="50" height="30"></a></li>
+                        <li><a href="kimono.php"><img src="img/kimono1.png" width="50" height="30"></a></li>
+                        <li><a href="rakugo.php"><img src="img/rakugo1.png" width="50" height="30"></a></li>
+                    <?php if (isset($_SESSION['id'])): ?>
+                        <li><a href="question.php">F&Q</a></li>
+                        <li ><a href="index.php#portfolio">photos</a></li>
+                        <li><a href="index.php#clients">comments</a></li>
+                        <li><a href="logout.php">logout</a></li>
+                    <?php else: ?>
+                        <li><a href="login.php">login</a></li>
+                    <?php endif ?>
+                    </ul>
             </div>
         </div>
     </nav>

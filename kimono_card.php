@@ -13,7 +13,7 @@
 			<?php foreach ($kimono['comment'] as $kimono_comment): ?>
 			<div class="row">
 				<div class="col-md-5">
-					<img src="img/portfolio/kabuki2.jpg" height="60" style="text-align :left;"><br>
+					<img src="img/portfolio/kabuki2.jpg" height="60" width="60" style="text-align :left;"><br>
 					<p style="text-align:left;"><strong><?php echo $kimono_comment['name']; ?></strong></p>
 				</div>
 					<div class="col-md-7">

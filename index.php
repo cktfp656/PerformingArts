@@ -142,7 +142,7 @@ if(!isset($_SESSION['id'])){
           <li><a href="#portfolio" class="smoothscroll">Photos</a></li>
           <li><a href="#clients" class="smoothscroll">Comments</a></li>
           <li><a href="new_contents.php">My Page</a></li>
-          <li><a href="question.php">Inquiries</a></li>
+          <li><a href="question.php">Q&A</a></li>
           <li><a href="#contact" class="smoothscroll">Contact</a></li>
           <li><a href="logout.php" >logout</a></li>
         </ul>
@@ -205,14 +205,14 @@ if(!isset($_SESSION['id'])){
     <div class="row">
 
       <?php foreach ($kabuki_contents as $kabuki) { ?>
-        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $kabuki['contents_img_name']; ?>" alt=""></div>
+        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $kabuki['contents_img_name']; ?>" style="height: 452px; widows: 452px;"></div>
       <?php } ?>
       
       <?php foreach ($kimono_contents as $kimono) { ?>
-        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $kimono['contents_img_name']; ?>" alt=""></div>
+        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $kimono['contents_img_name']; ?>" style="height: 452px; widows: 452px;"></div>
       <?php } ?>
       <?php foreach ($rakugo_contents as $rakugo) { ?>
-        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $rakugo['contents_img_name']; ?>" alt=""></div>
+        <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="contents-img/<?php echo $rakugo['contents_img_name']; ?>" style="height: 452px; widows: 100px;"></div>
       <?php } ?>
     <!-- /row -->
   </div>
@@ -225,6 +225,7 @@ if(!isset($_SESSION['id'])){
         <div class="col-sm-4">
           <div class="row title-row">
             <div class="col-1 col-sm-12 font-left"><span class="font-semibold">Clients</span> こんな方にお勧め!</div>
+            <iframe width="250" height="250" src="https://www.youtube.com/embed/dhwQrI785Ng" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
           <div class="row line-row">
             <div class="col-1 col-sm-12 font-left"></div>

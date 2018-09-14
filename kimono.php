@@ -85,7 +85,7 @@ while(true){
                         <li><a href="kimono.php"><img src="img/kimono1.png" width="50" height="30"></a></li>
                         <li><a href="rakugo.php"><img src="img/rakugo1.png" width="50" height="30"></a></li>
                     <?php if (isset($_SESSION['id'])): ?>
-                        <li><a href="question.php">F&Q</a></li>
+                        <li><a href="question.php">Q&A</a></li>
                         <li ><a href="index.php#portfolio">photos</a></li>
                         <li><a href="index.php#clients">comments</a></li>
                         <li><a href="logout.php">logout</a></li>

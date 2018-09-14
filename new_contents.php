@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +37,7 @@
                         <li><a href="kimono.php"><img src="img/kimono1.png" width="50" height="30"></a></li>
                         <li><a href="rakugo.php"><img src="img/rakugo1.png" width="50" height="30"></a></li>
                     <?php if (isset($_SESSION['id'])): ?>
-                        <li><a href="question.php">F&Q</a></li>
+                        <li><a href="question.php">Q&A</a></li>
                         <li ><a href="index.php#portfolio">photos</a></li>
                         <li><a href="index.php#clients">comments</a></li>
                         <li><a href="logout.php">logout</a></li>
@@ -58,7 +59,7 @@
         			<form method="POST" action="new_contents_check.php" class=""form-horizontal" role="form" enctype="multipart/form-data">
            				<input type="file" name="picture_path" class="form-control">
                         <textarea name="description" id="" style="width: 100%" rows="3" placeholder="説明文を入力して下さい"></textarea>
-                        <div class="btn-group" data-toggle="buttons" style="width: 555px;">
+                        <div class="btn-group" data-toggle="buttons" style="width: 100%;">
                             <label class="btn btn-success active" style="width: calc(100%/3);">
                                 <input name="code" type="radio" autocomplete="off" value="kimono" checked> 着物
                             </label>
